@@ -12,15 +12,16 @@ public class Manager {
 	
 	public void DisplayTopScoringMatches(){
 
+        //we will set the first match as the top for the time being
+        String topName =  leagueMatches.get(0).getName();
+        int topScore = leagueMatches.get(0).getScore();
 
-        String topName =  leagueMatches.get(0).name;
-        int topScore = leagueMatches.get(0).score;
-
-         for (int i =1; i<leagueMatches.length();i++)
+        //for each item after the first, we'll compare scores and set the top if its greater
+        for (int i =1; i<leagueMatches.length();i++)
          {
-             if (topScore < leagueMatches.get(i).score) {
-                 topName = leagueMatches.get(i).name;
-                 topScore = leagueMatches.get(i).score;
+             if (topScore < leagueMatches.get(i).getScore()) {
+                 topName = leagueMatches.get(i).getName();
+                 topScore = leagueMatches.get(i).getScore();
              }
          }
 	}
