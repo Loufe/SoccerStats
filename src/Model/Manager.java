@@ -11,7 +11,18 @@ public class Manager {
 	}
 	
 	public void DisplayTopScoringMatches(){
-		//TODO: IMPLEMENT THIS
+
+
+        String topName =  leagueMatches.get(0).name;
+        int topScore = leagueMatches.get(0).score;
+
+         for (int i =1; i<leagueMatches.length();i++)
+         {
+             if (topScore < leagueMatches.get(i).score) {
+                 topName = leagueMatches.get(i).name;
+                 topScore = leagueMatches.get(i).score;
+             }
+         }
 	}
 	public void DisplayTop5Players(){
 		//TODO: IMPLEMENT THIS
